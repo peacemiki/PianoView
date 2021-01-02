@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PianoView</string>
+
+    <string name="A0">라0</string>
+    <string name="B0">시0</string>
+    <string name="C8">도8</string>
+
+    <string name="DO">도</string>
+    <string name="RE">레</string>
+    <string name="MI">미</string>
+    <string name="FA">파</string>
+    <string name="SOL">솔</string>
+    <string name="LA">라</string>
+    <string name="SI">시</string>
+</resources>

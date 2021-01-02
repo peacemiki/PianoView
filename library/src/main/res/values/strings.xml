@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PianoView</string>
+
+    <string name="A0">A0</string>
+    <string name="B0">B0</string>
+    <string name="C8">C8</string>
+
+    <string name="DO">C</string>
+    <string name="RE">D</string>
+    <string name="MI">E</string>
+    <string name="FA">F</string>
+    <string name="SOL">G</string>
+    <string name="LA">A</string>
+    <string name="SI">B</string>
 </resources>

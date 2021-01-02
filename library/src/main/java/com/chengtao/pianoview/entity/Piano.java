@@ -138,12 +138,12 @@ public class Piano {
               case 0:
                 mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.RIGHT));
                 mKeys[j].setVoice(PianoVoice.LA);
-                mKeys[j].setLetterName("A0");
+                mKeys[j].setLetterName(context.getString(R.string.A0));
                 break;
               case 1:
                 mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.LEFT));
                 mKeys[j].setVoice(PianoVoice.SI);
-                mKeys[j].setLetterName("B0");
+                mKeys[j].setLetterName(context.getString(R.string.B0));
                 break;
             }
             continue;
@@ -153,7 +153,7 @@ public class Piano {
             areaOfKey[0] = mKeys[j].getKeyDrawable().getBounds();
             mKeys[j].setAreaOfKey(areaOfKey);
             mKeys[j].setVoice(PianoVoice.DO);
-            mKeys[j].setLetterName("C8");
+            mKeys[j].setLetterName(context.getString(R.string.C8));
             break;
           }
           //非固定属性
@@ -161,37 +161,37 @@ public class Piano {
             case 0:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.RIGHT));
               mKeys[j].setVoice(PianoVoice.DO);
-              mKeys[j].setLetterName("C" + i);
+              mKeys[j].setLetterName(context.getString(R.string.DO) + i);
               break;
             case 1:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.LEFT_RIGHT));
               mKeys[j].setVoice(PianoVoice.RE);
-              mKeys[j].setLetterName("D" + i);
+              mKeys[j].setLetterName(context.getString(R.string.RE) + i);
               break;
             case 2:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.LEFT));
               mKeys[j].setVoice(PianoVoice.MI);
-              mKeys[j].setLetterName("E" + i);
+              mKeys[j].setLetterName(context.getString(R.string.MI) + i);
               break;
             case 3:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.RIGHT));
               mKeys[j].setVoice(PianoVoice.FA);
-              mKeys[j].setLetterName("F" + i);
+              mKeys[j].setLetterName(context.getString(R.string.FA) + i);
               break;
             case 4:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.LEFT_RIGHT));
               mKeys[j].setVoice(PianoVoice.SO);
-              mKeys[j].setLetterName("G" + i);
+              mKeys[j].setLetterName(context.getString(R.string.SOL) + i);
               break;
             case 5:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.LEFT_RIGHT));
               mKeys[j].setVoice(PianoVoice.LA);
-              mKeys[j].setLetterName("A" + i);
+              mKeys[j].setLetterName(context.getString(R.string.LA) + i);
               break;
             case 6:
               mKeys[j].setAreaOfKey(getWhitePianoKeyArea(i, j, BlackKeyPosition.LEFT));
               mKeys[j].setVoice(PianoVoice.SI);
-              mKeys[j].setLetterName("B" + i);
+              mKeys[j].setLetterName(context.getString(R.string.SI) + i);
               break;
           }
         }

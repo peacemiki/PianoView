@@ -111,7 +111,7 @@ public class PianoView extends View {
 
   @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
     Log.e(TAG, "onMeasure");
-    Drawable whiteKeyDrawable = ContextCompat.getDrawable(context, R.drawable.white_piano_key);
+    Drawable whiteKeyDrawable = ContextCompat.getDrawable(context, R.drawable.white_piano_key1);
     //最小高度
     int whiteKeyHeight = whiteKeyDrawable.getIntrinsicHeight();
     //获取布局中的高度和宽度及其模式

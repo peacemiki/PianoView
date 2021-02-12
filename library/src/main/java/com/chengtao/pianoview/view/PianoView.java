@@ -93,6 +93,8 @@ public class PianoView extends View {
     private static final int HANDLE_AUTO_PLAY_WHITE_DOWN = 3;
     private static final int HANDLE_AUTO_PLAY_KEY_UP = 4;
 
+    private boolean drawLetter = true;
+
     //构造函数
     public PianoView(Context context) {
         this(context, null);
@@ -111,6 +113,10 @@ public class PianoView extends View {
         paint.setStyle(Paint.Style.FILL);
         //初始化正方形
         square = new RectF();
+    }
+
+    public void setDrawLetter(boolean draw) {
+        drawLetter = draw;
     }
 
     @Override
@@ -173,21 +179,23 @@ public class PianoView extends View {
                     paint.setColor(Color.parseColor(pianoColors[i]));
                     key.getKeyDrawable().draw(canvas);
                     //初始化音名区域
-                    Rect r = key.getKeyDrawable().getBounds();
-                    int sideLength = (r.right - r.left) / 2;
-                    int left = r.left + sideLength / 2;
-                    int top = r.bottom - sideLength - sideLength / 3;
-                    int right = r.right - sideLength / 2;
-                    int bottom = r.bottom - sideLength / 3;
-                    square.set(left, top, right, bottom);
-                    canvas.drawRoundRect(square, 6f, 6f, paint);
-                    paint.setColor(Color.BLACK);
-                    paint.setTextSize(sideLength / 1.8f);
-                    Paint.FontMetricsInt fontMetrics = paint.getFontMetricsInt();
-                    int baseline =
-                            (int) ((square.bottom + square.top - fontMetrics.bottom - fontMetrics.top) / 2);
-                    paint.setTextAlign(Paint.Align.CENTER);
-                    canvas.drawText(key.getLetterName(), square.centerX(), baseline, paint);
+                    if (drawLetter) {
+                        Rect r = key.getKeyDrawable().getBounds();
+                        int sideLength = (r.right - r.left) / 2;
+                        int left = r.left + sideLength / 2;
+                        int top = r.bottom - sideLength - sideLength / 3;
+                        int right = r.right - sideLength / 2;
+                        int bottom = r.bottom - sideLength / 3;
+                        square.set(left, top, right, bottom);
+                        canvas.drawRoundRect(square, 6f, 6f, paint);
+                        paint.setColor(Color.BLACK);
+                        paint.setTextSize(sideLength / 1.8f);
+                        Paint.FontMetricsInt fontMetrics = paint.getFontMetricsInt();
+                        int baseline =
+                                (int) ((square.bottom + square.top - fontMetrics.bottom - fontMetrics.top) / 2);
+                        paint.setTextAlign(Paint.Align.CENTER);
+                        canvas.drawText(key.getLetterName(), square.centerX(), baseline, paint);
+                    }
                 }
             }
         }
